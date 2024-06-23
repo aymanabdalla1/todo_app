@@ -7,7 +7,7 @@
 ### MongoDB - as the database
 ### Express.js - as the backend framework
 ### React.js - as the frontend framework
-### Node.js - as something
+### Node.js - as runtime environment
 
 ## Current Progress
 ### I will split up the tutorial and have the game plan ready, TOTAL TIME: 2hrs 30min
@@ -17,3 +17,4 @@
 ### 90 - 120 min -> DAY 4
 ### 120 - 150 min -> DAY 5
 
+## GOAL: be able to make POST, GET, PUT correctly, learn correct structuring from front and back, be able to make 1 api call B)
