@@ -1,20 +1,25 @@
 # todo_app
 
-## okay, so i didn't know everything i needed to before starting project_in, so i will start and finish this todo app tutorial to teach me all the basics
-## https://www.youtube.com/watch?v=giXuiotopO0
+## Overview
+This is a tutorial for building a todo app using the MERN stack. The tutorial can be found [here](https://www.youtube.com/watch?v=giXuiotopO0).
 
-## MERN Stack 
-### MongoDB - as the database
-### Express.js - as the backend framework
-### React.js - as the frontend framework
-### Node.js - as runtime environment
+## Technologies Used
+- MongoDB: as the database
+- Express.js: as the backend framework
+- React.js: as the frontend framework
+- Node.js: as the runtime environment
 
 ## Current Progress
-### I will split up the tutorial and have the game plan ready, TOTAL TIME: 2hrs 30min
-### 0 - 30 min -> DAY 1 
-### 30 - 60 min -> DAY 2
-### 60 - 90 min -> DAY 3
-### 90 - 120 min -> DAY 4
-### 120 - 150 min -> DAY 5
+I will split up the tutorial and have the game plan ready with the following schedule:
+- Part 1: 0-30 min -> DONE
+- Part 2: 30-60 min
+- Part 3: 60-90 min
+- Part 4: 90-120 min
+- Part 5: 120-150 min
 
-## GOAL: be able to make POST, GET, PUT correctly, learn correct structuring from front and back, be able to make 1 api call B)
+## Goal
+By the end of this tutorial, I aim to:
+- Understand how to make POST, GET, and PUT requests correctly
+- Learn the correct structuring of both the frontend and backend
+- Be able to make at least one API call successfully
+
