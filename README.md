@@ -12,7 +12,7 @@ This is a tutorial for building a todo app using the MERN stack. The tutorial ca
 ## Current Progress
 I will split up the tutorial and have the game plan ready with the following schedule:
 - Part 1: 0-30 min -> DONE
-- Part 2: 30-60 min
+- Part 2: 30-60 min -> DONE
 - Part 3: 60-90 min
 - Part 4: 90-120 min
 - Part 5: 120-150 min
