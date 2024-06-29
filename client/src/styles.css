@@ -48,11 +48,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* APP Styles */
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   max-width: 1200px;
+  max-height: fit-content;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background-color: aquamarine;
 } 
 
 .title {
@@ -87,5 +87,33 @@ p, h1, h2, h3, h4, h5, h6 {
 
   &.hover {
     transform: scale(1.1);
+  }
+}
+
+/* FORM Styles */
+.form {
+  display: flex;
+  gap: 1rem;
+  width: 50%;
+  margin: 1rem auto;
+}
+
+.form_input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: lightblue;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: lightcoral;
   }
 }

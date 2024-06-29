@@ -21,12 +21,12 @@ router.get('/todos', async (req, res) => {
 // POST /todos post is for creating, so we will create a new todo
 router.post('/todos', async (req, res) => {
     const collection = getCollection(); // Get the collection
-    const {todo} = req.body; // Get the todo from the request body
+    let {todo} = req.body; // Get the todo from the request body
 
     if (!todo) { // If there is no todo
         return res.status(400).json({error: "Todo is required"}); // Send a response with an error message
     }
-    todo = JSON.stringify(todo); // Convert the todo to a string
+    todo = (typeof todo == "string") ? todo : JSON.stringify(todo); // Convert the todo to a string
 
     const newTodo = await collection.insertOne({todo, status: false}); // Insert the todo into the collection, false is incomplete
 
