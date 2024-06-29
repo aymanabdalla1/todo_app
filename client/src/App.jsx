@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'; // Import the useEffect hook that will run a function when the component is loaded
-
+import Todo from './todo'; // Import the todo component
 
 export default function App() {
 
@@ -49,14 +49,7 @@ export default function App() {
       <div className="todos">
         {todos.length > 0 &&
           todos.map((todo) => (
-            <div key={todo.id} className="todo">
-              <p>{todo.todo}</p>
-              <div>
-                <button className="todo_status">
-                  {todo.status ? "☑" : "☐"}
-                </button>
-              </div>
-            </div>
+            <Todo key={todo.id} todo={todo} setTodos={setTodos}/> // pass the todo to the todo component as a prop
           ))}
       </div>
     </main>
