@@ -2,6 +2,7 @@ require("dotenv").config(); // import the dotenv package and configure it
 const { connectToMongoDB } = require('./database'); // import the connectToMongoDB function from the database file
 const express = require('express'); // import express to be able to be used
 const app = express(); // create an instance of express and store it in a variable called app
+app.use(express.json()); // use the express.json() middleware to parse incoming requests with JSON payloads
 
 //request = sends data to the server | response = sends data back to the client
 const router = require('./routes'); // import the router from the routes file

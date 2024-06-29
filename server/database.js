@@ -2,9 +2,9 @@ require("dotenv").config(); // import the dotenv package and configure it
 const { MongoClient, ServerApiVersion, StreamDescription } = require("mongodb"); // import the MongoClient and ServerApiVersion from the mongodb package
 
 // this will be the secret database connection string in .env file
-const uri = process.env.MONGO_URI || "mongodb://localhost:27017/"; // create a variable called uri and set it to the MONGO_URI from the .env file
+const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/"; // create a variable called uri and set it to the MONGO_URI from the .env file
 const options = {
-    serverApit: {
+    serverApi: {
         version: ServerApiVersion.v1,
         strict: true,
         deprecationErrors: true,
