@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'; // Import the useEffect hook that w
 
 export default function App() {
 
-  const [message, setMessage] = useState(""); // useState is a hook that allows you to use state in a functional component
+  const [todos, setTodos] = useState(""); // useState is a hook that allows you to use state in a functional component
 
 
   useEffect(() => { // get todos one time
@@ -11,7 +11,7 @@ export default function App() {
       const res = await fetch("/api/todos"); // fetch the todos from the server
       const todos = await res.json(); // convert the response to json
       
-      setMessage(todos.msg); // set the message to the message from the server, msg is the json object we used in the server
+      setTodos(todos); // set the todo array from the server, msg is the json object we used in the server
     }
 
     getTodos(); // call the function
@@ -19,10 +19,18 @@ export default function App() {
 
   return (
     <main className="container">
-        <h1>
-           Hello World!
-           {message && <p>{message}</p>} {/* if message is true, display the message */}
-        </h1>
+        <h1 className = "title"> Hello World! </h1>
+        <div className = "todos">
+          {(todos.length > 0) && 
+          todos.map((todo) => (
+            <div key ={todo.id} className = "todo">
+              <p>{todo.todo}</p>
+              <div>
+                <button className = "todo_status">{(todo.status) ? "☑" : "☐"}</button>
+              </div>
+            </div>
+          ))}
+        </div>
     </main>
   );
 }

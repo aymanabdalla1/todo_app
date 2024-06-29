@@ -22,6 +22,12 @@ router.get('/todos', async (req, res) => {
 router.post('/todos', async (req, res) => {
     const collection = getCollection(); // Get the collection
     const {todo} = req.body; // Get the todo from the request body
+
+    if (!todo) { // If there is no todo
+        return res.status(400).json({error: "Todo is required"}); // Send a response with an error message
+    }
+    todo = JSON.stringify(todo); // Convert the todo to a string
+
     const newTodo = await collection.insertOne({todo, status: false}); // Insert the todo into the collection, false is incomplete
 
     console.log(todo); // Log the todo to the console
@@ -43,6 +49,9 @@ router.put('/todos/:id', async (req, res) => {
     const _id = new ObjectId(req.params.id); // Get the id from the request parameters
     const {status} = req.body; // Get the status from the request body
 
+    if (typeof status !== "boolean") { // If the status is not a boolean
+        return res.status(400).json({error: "Status must be a boolean"}); // Send a response with an error message
+     } 
     const updateTodo = await collection.updateOne({_id}, {$set: {staus: !status}}); // Update the todo with the id
     res.status(200).json(updateTodo)
 });
