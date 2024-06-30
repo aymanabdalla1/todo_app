@@ -14,8 +14,8 @@ I will split up the tutorial and have the game plan ready with the following sch
 - Part 1: 0-30 min -> DONE
 - Part 2: 30-60 min -> DONE
 - Part 3: 60-90 min -> DONE
-- Part 4: 90-120 min
-- Part 5: 120-150 min
+- Part 4: 90-120 min -> DONE
+- Part 5: 120-150 min -> DONE
 
 ## Goal
 By the end of this tutorial, I aim to:
