@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 /* CSS Reset */
 /*
   1. Use a more-intuitive box-sizing model.
@@ -19,6 +21,11 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: #060425;
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  font-family: "Rubik", sans-serif;
+  font-size: larger;
+  color: white
 }
 /*
   5. Improve media defaults
@@ -39,31 +46,25 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
-/*
-  8. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
-}
 
 /* APP Styles */
 .container {
   max-width: 1200px;
-  max-height: fit-content;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  background-color: aquamarine;
+  margin: 0 auto;
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 } 
 
 .title {
   text-align: center;
-  font-size: 2rem;
+  padding: 3rem 1rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 .todos {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -71,15 +72,43 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: lavender;
+  border-radius: 1rem;
+  background-color: rgb(255, 255, 255, 0.1);
+  width: 70%;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: rgb(255, 255, 255, 0.2);;
+    transform: scale(1.01);
+  }
+}
+
+.mutations {
+  display: flex;
+  gap: 0.2em;
 }
 
 .todo_status {
-  display: flex;
-  gap: 0.5rem;
+  color: white;
+  background: none;
+  font-size: 1.75rem;
+  border: none;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &.hover {
+    transform: scale(1.1);
+  }
+}
+
+.todo_delete {
+  color: white;
+  background: none;
+  font-size: 1.5rem;
   border: none;
   line-height: 1.5;
   cursor: pointer;
@@ -94,7 +123,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .form {
   display: flex;
   gap: 1rem;
-  width: 50%;
+  width: 70%;
   margin: 1rem auto;
 }
 
@@ -102,18 +131,42 @@ p, h1, h2, h3, h4, h5, h6 {
   flex: 1;
   padding: 0.5rem 1rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 1rem;
 }
 
-.button {
-  padding: 0.5rem 1rem;
+.form_button {
+  padding: 0.5rem 1.25rem;
   border: none;
-  border-radius: 5px;
-  background-color: lightblue;
+  border-radius: 1rem;
+  background-color: rgb(255, 255, 255, 0.9);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: lightcoral;
+    color: white;
+    background-color: rgb(255, 255, 255, 0.4);
+    transform: scale(1.01);
+  }}
+
+  @media (max-width: 420px) {
+    .title{
+      font-size:2.5rem;
+    }
+
+    .mutations {
+      gap: 0;
+    }
+    .todo_status,
+    .todo_delete {
+      font-size: 1.25rem;
+    }
+
+    .form {
+      width: 90%;
+    }
+
+    .todo {
+      width: 90%;
+      font-size: 1.2rem;
+    }
   }
-}
