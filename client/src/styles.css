@@ -21,8 +21,9 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: #060425;
+  background-color: #002f4f;
   background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   font-family: "Rubik", sans-serif;
   font-size: larger;
   color: white

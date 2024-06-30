@@ -34,7 +34,7 @@ export default function App() {
 
   return (
     <main className="container">
-      <h1 className="title"> Awesome Todo List! </h1>
+      <h1 className="title"> 😃 Todo List! </h1>
       <form className="form" onSubmit={createNewTodo}>
         <input
           className="form_input"
